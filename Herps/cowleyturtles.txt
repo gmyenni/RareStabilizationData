@@ -1,0 +1,16 @@
+Year	Site	Total	Chelydra_serpentina	Chrysemys_picta	Trachemys_scripta
+1989	CowleyCounty	0	0	0	0
+1990	CowleyCounty	2	1	0	1
+1991	CowleyCounty	-99	-99	-99	-99
+1992	CowleyCounty	0	0	0	0
+1993	CowleyCounty	0	0	0	0
+1994	CowleyCounty	0	0	0	0
+1995	CowleyCounty	2	1	0	1
+1996	CowleyCounty	7	1	4	2
+1997	CowleyCounty	3	1	1	1
+1998	CowleyCounty	0	0	0	0
+1999	CowleyCounty	2	0	0	2
+2000	CowleyCounty	0	0	0	0
+2001	CowleyCounty	2	0	0	2
+2002	CowleyCounty	0	0	0	0
+2003	CowleyCounty	3	0	0	3

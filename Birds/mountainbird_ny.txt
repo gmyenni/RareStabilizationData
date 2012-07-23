@@ -1,0 +1,12 @@
+year	state	total	AmericanRobin	BicknellsThrush	BlackandwhiteWarbler	BlackburnianWarbler	BlackcappedChickadee	BlackpollWarbler	BlackthroatedBlueWarbler	BlackthroatedGreenWarbler	BlueheadedVireo	BlueJay	BorealChickadee	BrownCreeper	CanadaWarbler	CedarWaxwing	CommonRaven	DarkeyedJunco	EurasianWren	GoldencrownedKinglet	HairyWoodpecker	HermitThrush	LeastFlycatcher	MagnoliaWarbler	MourningDove	MyrtleWarbler	NashvilleWarbler	Ovenbird	PurpleFinch	RedbreastedNuthatch	RedeyedVireo	RubycrownedKinglet	SlatecoloredJunco	SwainsonsThrush	WhitethroatedSparrow	YellowbelliedFlycatcher	YellowbelliedSapsucker	YellowrumpedWarbler
+2000	NewYork	18	0	1	0	0	0	3	0	0	0	0	0	0	0	0	0	0	10	0	0	0	0	0	0	0	0	0	0	0	0	0	0	2	2	0	0	0
+2001	NewYork	330	0	30	0	0	0	90	0	0	0	0	0	0	0	0	0	0	69	0	0	0	0	0	0	0	0	0	0	0	0	0	0	61	80	0	0	0
+2002	NewYork	462	0	48	0	0	0	118	0	0	0	0	0	0	0	0	0	0	86	0	0	0	0	0	0	0	0	0	0	0	0	0	0	85	125	0	0	0
+2003	NewYork	684	0	76	0	0	0	164	0	0	0	0	0	0	0	0	0	0	123	0	0	0	0	0	0	0	0	0	0	0	0	0	0	130	191	0	0	0
+2004	NewYork	554	0	65	0	0	0	109	0	0	0	0	0	0	0	0	0	0	129	0	0	0	0	0	0	0	0	0	0	0	0	0	0	106	145	0	0	0
+2005	NewYork	1130	0	79	0	2	3	146	7	5	2	6	5	6	0	6	3	0	217	17	2	18	2	27	0	70	18	1	10	7	6	5	40	167	213	32	8	0
+2006	NewYork	988	1	100	1	2	11	135	5	13	9	2	4	2	2	6	2	0	155	13	3	20	7	27	1	61	24	1	9	5	3	1	29	148	160	24	2	0
+2007	NewYork	1394	3	109	4	2	7	184	4	18	10	7	8	0	1	10	9	26	106	7	3	32	0	64	3	92	18	2	21	21	6	9	32	225	252	54	5	40
+2008	NewYork	1264	2	111	2	1	5	170	7	14	10	8	2	0	1	1	1	22	155	15	0	19	1	32	2	70	16	7	7	19	6	11	29	185	232	55	5	41
+2009	NewYork	1212	0	112	0	0	1	160	2	7	8	1	3	2	1	0	4	29	156	6	0	15	2	35	3	70	19	0	6	9	5	13	31	208	236	40	4	24
+2010	NewYork	762	0	79	0	1	1	120	1	2	2	2	0	3	0	4	0	4	113	8	1	4	2	15	0	36	2	2	6	5	1	8	10	168	137	17	0	8

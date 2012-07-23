@@ -1,0 +1,12 @@
+Year	site	total	Peromyscus.maniculatus	Napaeozapus.insignis	Tamias.striatus
+1966	hilaire	4.8	3.6	0.2	1
+1967	hilaire	7.175	4.6	0.2	2.375
+1968	hilaire	13.95	11.8	1.15	1
+1969	hilaire	11.5	8.05	0.2	3.25
+1970	hilaire	5.6	4.9	0.2	0.5
+1971	hilaire	6.1	5.025	0.2	0.875
+1972	hilaire	-99	-99	-99	-99
+1973	hilaire	11.6	10.4	1.2	0
+1974	hilaire	2.3	2.3	0	0
+1975	hilaire	6.4	4	0.3	2.1
+1976	hilaire	2.6	1.4	0.2	1

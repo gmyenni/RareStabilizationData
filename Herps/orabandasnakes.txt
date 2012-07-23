@@ -1,0 +1,5 @@
+Year	Site	Total	Brachyurophis_semifasciata	Demansia_psammophis	Parasuta_monachus	Pseudonaja_modesta	Ramphotyphlops_australis	Ramphotyphlops_bituberculatus	Ramphotyphlops_harnatus	Simoselaps_bertholdii	Suta_fasciata
+2000	OraBanda	26	4.5	0	5	1	6.5	1	6.5	1	0.5
+2001	OraBanda	11.8	0.8	0.2	1.8	0.2	2	0.2	5	1	0.6
+2002	OraBanda	13.66666667	1.333333333	0	3.333333333	0	2	0	6.333333333	0.333333333	0.333333333
+2003	OraBanda	20	3	1	1	0	10	0	3	1	1

@@ -1,0 +1,8 @@
+YEAR	site	total	Chaetodipus.hispidus	Dipodomys.ordii	Microtus.ochrogaster	Peromyscus.maniculatus	Reithrodontomys.megalotis
+1994	shortgrass	96	0	38	0	47	11
+1995	shortgrass	195	0	54	0	135	6
+1996	shortgrass	417	3	52	0	280	82
+1997	shortgrass	169	2	75	0	85	7
+1998	shortgrass	241	4	152	6	79	0
+1999	shortgrass	214	3	99	12	94	6
+2000	shortgrass	150	0	56	1	80	13
