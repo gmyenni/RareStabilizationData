@@ -5,7 +5,7 @@ source("./stabil_function.r")
 #portal
 portalRA=read.table("./Mammals/Portal/rodents_controls.txt",header=T)
 portalE=read.table("./Mammals/Portal/energy_controls.txt",header=T)
-portalrod_out=stabil(portalE,c("Dipodomys.merriami","Dipodomys.ordii","Dipodomys.spectabilis","Chaetodipus.baileyi","Peromyscus.eremicus","Perognathus.flavus","Peromyscus.maniculatus","Chaetodipus.penicillatus","Reithrodomtomys.montanus"),"Portal Rodents")
+portalrod_out=stabil(portalRA,c("Dipodomys.merriami","Dipodomys.ordii","Dipodomys.spectabilis","Chaetodipus.baileyi","Peromyscus.eremicus","Perognathus.flavus","Peromyscus.maniculatus","Chaetodipus.penicillatus","Reithrodomtomys.montanus"),"Portal Rodents")
 
 #sevilleta
 pgrassRA=read.table("./Mammals/sevilleta/5pgrass.txt",header=T)
@@ -130,7 +130,7 @@ yukon_out=stabil(yukon,names(yukon)[-(1:3)],"Yukon Carnivores")
 #################################BIRDS##############################################################
 
 #Hubbard Brook
-hubbard=read.csv("./Birds/hubbardbrook.csv",header=T)
+hubbard=read.table("./Birds/hubbard.txt",header=T)
 hubbard_out=stabil(hubbard,names(hubbard)[-(1:3)],"Hubbard Brook")
 
 #White Mountain NF
@@ -138,7 +138,7 @@ whitemt=read.table("./Birds/whitemountain.txt",header=T)
 whitemt_out=stabil(whitemt,names(whitemt)[-(1:3)],"White Mountain NF Birds")
 
 #Redvers
-redvers=read.csv("./Birds/redvers.csv",header=T)
+redvers=read.csv("./Birds/redvers.txt",header=T)
 redvers_out=stabil(redvers,names(redvers)[-(1:3)],"Redvers Waterfowl")
 
 #Skokholm

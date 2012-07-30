@@ -1,0 +1,12 @@
+SampleYear	intertidal_site_code	total	acanthinucella.spp	alia.spp	amphissa.versicolor	aplysia.californica	bittium.eschrichtii	calliostoma.spp	ceratostoma.nuttalli	chitons	conus.californicus	crepidula.spp	epitonium.tinctum	fissurella.volcano	homalopoma.spp	katharina.tunicata	kelletia.kelletii	lepidochitona.dentiens	lepidochitona.hartwegii	lepidochitona.spp	lepidozona.spp	limpets.over.15.mm.in.size	littorina.spp	macron.lividus	mopalia.spp	norrisia.norrisi	nucella.canaliculata	nucella.emarginata	nucella.lamellosa	nucella.spp	nuttallina.spp	ocenebra.circumtexta	ocenebra.poulsoni	ocenebra.spp	onchidella.borealis	opalia.spp_	tegula.aureotincta	tegula.brunnea	tegula.eiseni	tegula.funebralis	tegula.gallina	tonicella.spp
+1999	SHB	9.95	0.05	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.8	0	0	0.05	0	0	0	0	0	0	0	0	0	0.25	0	0	0	0	0	0	0	8.8	0	0
+2000	SHB	49.73333333	2.022222222	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1.155555556	0	0	0.244444444	0	0	0	0	0	0	0	0	0	0.177777778	0	0	0	0	0	0	0	46.13333333	0	0
+2001	SHB	119.58	2.04	0	0	0	0	0	0	0.3	0	0	0	0	0	0	0	0	1.04	0	0	0.2	48.5	0	0	0	0	0	0	0	0.12	0.16	0	0	0	0	0	0	0	67.22	0	0
+2002	SHB	314.92	3.42	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	2.1	0	0	0.68	244	0	0.1	0	0	0.04	0	0	0.28	0.16	0	0	0	0	0	0	0	64.14	0	0
+2003	SHB	516.76	4.64	0	0.04	0	0	0	0	0	0	0	0	0	0	0	0	0.2	1.78	0	0	0.44	453.18	0	0.12	0	0	0	0	0	0.38	0.22	0	0	0	0	0	0	0	55.76	0	0
+2004	SHB	436.28	4.16	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.08	1.34	0	0	0.22	374.6	0	0.1	0	0	0	0	0	0.26	0.62	0	0	0	0	0	0	0	54.9	0	0
+2005	SHB	616.92	2.82	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.76	0	0	0.1	571.86	0	0.06	0	0	0.02	0	0	0.04	0.58	0	0	0	0	0	0	0	40.68	0	0
+2006	SHB	538.12	3.8	0	0	0	0	0	0	0.02	0	0	0	0	0	0	0	0.06	0.44	0	0	0.14	497.54	0	0.02	0	0	0.02	0	0	0.48	0.2	0	0	0	0	0	0	0	35.4	0	0
+2007	SHB	336.34	1.96	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.02	0.84	0	0	0.28	309.46	0	0.08	0	0	0	0	0	0.62	0.2	0	0	0	0	0	0	0	22.88	0	0
+2008	SHB	130.08	2.2	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.1	1.2	0	0	0.72	83.82	0	0	0	0	0	0	0	0.66	0.26	0	0	0	0	0	0	0	41.12	0	0
+2009	SHB	169.28	1.44	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.16	0.84	0	0	0.72	112.08	0	0	0	0	0	0	0	0.68	0.2	0	0	0	0	0	0	0	53.16	0	0

@@ -1,0 +1,12 @@
+SampleYear	intertidal_site_code	total	hermit.crabs	idotea.spp	pachycheles.spp	pachygrapsus.crassipes	pachygrapsus.crassipes.and.hemigrapsus.nudus.recruits	pagurus.beringanus	pagurus.granosimanus	pagurus.hirsutiusculus	pagurus.samuelis	pagurus.spp	petrolisthes.spp	pugettia.spp
+1999	CAY	2.45	2.45	0	0	0	0	0	0	0	0	0	0	0
+2000	CAY	3.111111111	1.866666667	0	0	0	0	0	0	0.266666667	0.977777778	0	0	0
+2001	CAY	2.16	0	0	0	0	0	0	0.02	1.18	0.96	0	0	0
+2002	CAY	1.26	0	0	0	0.14	0	0	0	0.18	0.94	0	0	0
+2003	CAY	3.32	0	0	0	0.66	0	0	0	1.34	1.32	0	0	0
+2004	CAY	3.66	0	0	0	1.16	0.02	0	0	1.26	1.22	0	0	0
+2005	CAY	4.62	0	0	0	1.08	0	0	0	1.32	2.22	0	0	0
+2006	CAY	2.72	0	0	0	0.46	0	0	0	0.52	1.74	0	0	0
+2007	CAY	5.58	0	0	0	1.4	0	0	0	2.48	1.64	0	0.04	0.02
+2008	CAY	10.38	0	0.06	0	0.38	0.02	0	0	4.5	5.38	0	0	0.04
+2009	CAY	2.36	0	0	0	0.68	0	0	0	1.12	0.56	0	0	0

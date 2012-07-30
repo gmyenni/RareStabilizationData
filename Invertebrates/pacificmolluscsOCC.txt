@@ -1,0 +1,12 @@
+SampleYear	intertidal_site_code	total	acanthinucella.spp	alia.spp	amphissa.versicolor	aplysia.californica	bittium.eschrichtii	calliostoma.spp	ceratostoma.nuttalli	chitons	conus.californicus	crepidula.spp	epitonium.tinctum	fissurella.volcano	homalopoma.spp	katharina.tunicata	kelletia.kelletii	lepidochitona.dentiens	lepidochitona.hartwegii	lepidochitona.spp	lepidozona.spp	limpets.over.15.mm.in.size	littorina.spp	macron.lividus	mopalia.spp	norrisia.norrisi	nucella.canaliculata	nucella.emarginata	nucella.lamellosa	nucella.spp	nuttallina.spp	ocenebra.circumtexta	ocenebra.poulsoni	ocenebra.spp	onchidella.borealis	opalia.spp_	tegula.aureotincta	tegula.brunnea	tegula.eiseni	tegula.funebralis	tegula.gallina	tonicella.spp
+1999	OCC	0.466666667	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.466666667	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+2000	OCC	0.566666667	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	6.67E-02	0	0	0.4	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.1	0	0
+2001	OCC	134.8666667	0	0	0	0	0	0	0	1.366666667	0	0	0	0	0	0	0	0	0.733333333	0	0	0.3	129.1666667	0	3.33E-02	0	0	2.033333333	0	0	0.933333333	0	0	0	0	0	0	0	0	0.3	0	0
+2002	OCC	158.7	0	0	0	0	0	0	0	3.33E-02	0	0	0	0	0	0	0	0	0.466666667	0	0	0.5	151.3333333	0	0.133333333	0	0	3.466666667	0	0	2.533333333	0	0	0	0	0	0	0	0	0.233333333	0	0
+2003	OCC	117.4333333	3.33E-02	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.8	0	0	0.4	111.8	0	3.33E-02	0	3.33E-02	2.566666667	0	0	1.533333333	0	0	0	0	0	0	0	0	0.233333333	0	0
+2004	OCC	244.1333333	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.766666667	0	0	0.233333333	238.1333333	0	0	0	0	3.333333333	0	0	1.2	0	0	0	0	0	0	0	0	0.466666667	0	0
+2005	OCC	299.4666667	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.5	0	0	0.133333333	287.3	0	0	0	6.67E-02	9.333333333	0	0	1.233333333	0	0	0	0	0	0	0	0	0.9	0	0
+2006	OCC	346.1666667	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	3.33E-02	0.166666667	0	0	0.2	330.2333333	0	6.67E-02	0	0.133333333	13.66666667	0	0	0.933333333	0	0	0	0	0	0	0	0	0.733333333	0	0
+2007	OCC	144	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	6.67E-02	0	0	0	138.5333333	0	0.1	0	0.1	4.566666667	0	0	0.266666667	0	0	0	0	0	0	0	0	0.366666667	0	0
+2008	OCC	512.2333333	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.266666667	0	0	0.2	504.6666667	0	0.266666667	0	3.33E-02	5.366666667	0	0	0.833333333	0	0	0	0	0	0	0	0	0.6	0	0
+2009	OCC	337.8	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.2	0	0	6.67E-02	332.2666667	0	0	0	0	2.8	0	0	1.8	0	0	0	0	0	0	0	0	0.666666667	0	0

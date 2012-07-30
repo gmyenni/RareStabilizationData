@@ -1,0 +1,16 @@
+SampleYear	ExactName	total	Desmognathus.aeneus	Desmognathus.monticola	Desmognathus.ochrophaeus	Desmognathus.quadramaculatus
+1976	Coweeta.Hydrologic.Laboratory	57	8	27	15	7
+1977	Coweeta.Hydrologic.Laboratory	52	7	22	18	5
+1978	Coweeta.Hydrologic.Laboratory	50	7	21	17	5
+1979	Coweeta.Hydrologic.Laboratory	44	5	22	12	5
+1980	Coweeta.Hydrologic.Laboratory	70	5	35	18	12
+1981	Coweeta.Hydrologic.Laboratory	41	4	20	10	7
+1982	Coweeta.Hydrologic.Laboratory	59	9	22	21	7
+1983	Coweeta.Hydrologic.Laboratory	72	8	45	8	11
+1984	Coweeta.Hydrologic.Laboratory	58	8	25	15	10
+1985	Coweeta.Hydrologic.Laboratory	64	5	35	14	10
+1986	Coweeta.Hydrologic.Laboratory	58	3	25	17	13
+1987	Coweeta.Hydrologic.Laboratory	52	5	20	25	2
+1988	Coweeta.Hydrologic.Laboratory	67	5	30	27	5
+1989	Coweeta.Hydrologic.Laboratory	64	18	20	21	5
+1990	Coweeta.Hydrologic.Laboratory	69	10	30	25	4

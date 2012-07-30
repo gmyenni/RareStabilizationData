@@ -1,0 +1,12 @@
+SampleYear	intertidal_site_code	total	acanthinucella.spp	alia.spp	amphissa.versicolor	aplysia.californica	bittium.eschrichtii	calliostoma.spp	ceratostoma.nuttalli	chitons	conus.californicus	crepidula.spp	epitonium.tinctum	fissurella.volcano	homalopoma.spp	katharina.tunicata	kelletia.kelletii	lepidochitona.dentiens	lepidochitona.hartwegii	lepidochitona.spp	lepidozona.spp	limpets.over.15.mm.in.size	littorina.spp	macron.lividus	mopalia.spp	norrisia.norrisi	nucella.canaliculata	nucella.emarginata	nucella.lamellosa	nucella.spp	nuttallina.spp	ocenebra.circumtexta	ocenebra.poulsoni	ocenebra.spp	onchidella.borealis	opalia.spp_	tegula.aureotincta	tegula.brunnea	tegula.eiseni	tegula.funebralis	tegula.gallina	tonicella.spp
+1999	SAD	3.533333333	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	3.533333333	0	0	0	0	0	0	0	0	0	0	0	0
+2000	SAD	6.2	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.04	0	0	0.08	0	0	0	0	0	0	0	5.76	0.04	0	0	0	0	0	0	0	0	0.28	0	0
+2001	SAD	6.285714286	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.685714286	0	0	0	0	0.742857143	4.4	0	0	0.114285714	0	0	0	0	0	0	0	0	0.342857143	0	0
+2002	SAD	1.975	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.025	0	0	0	0	0.125	1.625	0	0	0.1	0	0	0	0	0	0	0	0	0.1	0	0
+2003	SAD	529.8863636	0	0	2.27E-02	0	0	0	0	0	0	0	0	0	0	0	0	4.55E-02	6.82E-02	0	0	0.772727273	522.0227273	0	4.55E-02	0	0.227272727	6.568181818	0	0	6.82E-02	0	0	0	0	0	0	0	0	4.55E-02	0	0
+2004	SAD	411.1818182	6.82E-02	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	2.27E-02	0	0	0.545454545	404.7954545	0	4.55E-02	0	9.09E-02	5.363636364	0	0	9.09E-02	0	0	0	0	0	0	0	0	0.159090909	0	0
+2005	SAD	256.1363636	2.27E-02	0	0	0	0	0	0	0	0	0	0	0	0	0	0	2.27E-02	4.55E-02	0	0	0.295454545	248.3863636	0	2.27E-02	0	0.409090909	6.590909091	0	0	4.55E-02	0	0	0	0	0	0	0	0	0.295454545	0	0
+2006	SAD	402.8863636	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	2.27E-02	0	0	0.363636364	391.7727273	0	2.27E-02	0	0.295454545	9.340909091	0	0	0.113636364	0	0	0	0	0	0	0	0	0.954545455	0	0
+2007	SAD	320.9090909	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	2.27E-02	0	0	0	0.113636364	310.9545455	0	2.27E-02	0	0.159090909	7.727272727	0	0	4.55E-02	0	0	0	0	0	0	0	0	1.863636364	0	0
+2008	SAD	218.1590909	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	6.82E-02	2.27E-02	0	0	0.522727273	208.2954545	0	0.113636364	0	0.386363636	6.75	0	0	6.82E-02	0	0	0	0	0	0	0	0	1.931818182	0	0
+2009	SAD	111.5909091	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.5	107.2272727	0	0	0	0	2.545454545	0	0	0	0	0	0	0	0	0	0	0	1.318181818	0	0

@@ -1,0 +1,17 @@
+SampleYear	ExactName	total	Chelydra.serpentina	Chrysemys.picta.marginata	Emydoidea.blandingii
+1975	E.S.George.Reserve	1088	166	780	142
+1976	E.S.George.Reserve	1179	191	838	150
+1977	E.S.George.Reserve	1224	182	892	150
+1978	E.S.George.Reserve	1298	195	937	166
+1979	E.S.George.Reserve	1308	206	925	177
+1980	E.S.George.Reserve	1315	204	940	171
+1981	E.S.George.Reserve	1271	177	906	188
+1982	E.S.George.Reserve	1254	149	931	174
+1983	E.S.George.Reserve	1224	125	938	161
+1984	E.S.George.Reserve	1456	198	1086	172
+1985	E.S.George.Reserve	1365	190	1004	171
+1986	E.S.George.Reserve	1254	187	890	177
+1989	E.S.George.Reserve	1118	189	929	0
+1990	E.S.George.Reserve	1270	196	1074	0
+1991	E.S.George.Reserve	1616	237	1210	169
+1992	E.S.George.Reserve	1458	217	1067	174

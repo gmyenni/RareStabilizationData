@@ -1,0 +1,12 @@
+SampleYear	intertidal_site_code	total	acanthinucella.spp	alia.spp	amphissa.versicolor	aplysia.californica	bittium.eschrichtii	calliostoma.spp	ceratostoma.nuttalli	chitons	conus.californicus	crepidula.spp	epitonium.tinctum	fissurella.volcano	homalopoma.spp	katharina.tunicata	kelletia.kelletii	lepidochitona.dentiens	lepidochitona.hartwegii	lepidochitona.spp	lepidozona.spp	limpets.over.15.mm.in.size	littorina.spp	macron.lividus	mopalia.spp	norrisia.norrisi	nucella.canaliculata	nucella.emarginata	nucella.lamellosa	nucella.spp	nuttallina.spp	ocenebra.circumtexta	ocenebra.poulsoni	ocenebra.spp	onchidella.borealis	opalia.spp_	tegula.aureotincta	tegula.brunnea	tegula.eiseni	tegula.funebralis	tegula.gallina	tonicella.spp
+1999	HAZ	7	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.2	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	6.8	0	0
+2000	HAZ	20.4	0.05	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.05	0	0	0.45	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	19.85	0	0
+2001	HAZ	136.075	0.3	0	0	0	0	0	0	0.2	0	0	0	0	0	0	0	0	0.2	0	0	1.15	102.5	0	0	0	0	2.025	0	0	0.15	0	0	0	0	0	0	0	0	29.55	0	0
+2002	HAZ	144.925	0.075	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.1	0	0	1.225	121.45	0	0	0	0.025	2.55	0	0	0.275	0	0	0	0	0	0	0	0	19.225	0	0
+2003	HAZ	319.8	0.125	0	0.325	0	0	0	0	0	0	0	0	0.025	0	0	0	0	0.4	0	0	1.25	290.05	0	0	0	0	4.475	0	0	0.45	0	0	0	0	0	0	0	0	22.7	0	0
+2004	HAZ	539.85	0.025	0	0	0	0	0	0	0	0	0	0	0.05	0	0	0	0.075	0.425	0	0	1.4	516.175	0	0	0	0	2.7	0	0	0.7	0	0	0	0	0	0	0	0	18.3	0	0
+2005	HAZ	540.025	0.05	0	0.025	0	0	0	0	0	0	0	0	0	0	0	0	0	0.7	0	0	0.65	509.025	0	0	0	0	3.35	0	0	0.5	0	0	0	0	0	0	0	0	25.725	0	0
+2006	HAZ	522.625	1.25	0	0	0	0.125	0	0	0	0	0	0	0	0	0	0	0.175	0.2	0	0	0.6	493.7	0	0	0	0	4.925	0	0	0.575	0	0	0	0	0	0	0	0	21.075	0	0
+2007	HAZ	495.25	0.05	0	0.025	0	1.125	0	0	0	0	0	0.1	0	0	0	0	0.025	0.725	0	0	0.85	469.2	0	0.025	0	0	4.175	0	0	0.35	0	0	0	0	0	0	0	0	18.6	0	0
+2008	HAZ	682.05	0	0	0	0	1.6	0	0	0	0	0	0	0	0	0	0	0.025	0.325	0	0	0.9	653.425	0	0	0	0	3.9	0	0	0.325	0	0	0	0	0	0	0	0	21.55	0	0
+2009	HAZ	464.05	0	0	0	0	0.8	0	0	0	0	0	0	0	0	0	0	0.05	0.2	0	0	1.25	438.6	0	0.05	0	0	3.2	0	0	0.3	0	0	0	0	0	0	0	0	19.6	0	0

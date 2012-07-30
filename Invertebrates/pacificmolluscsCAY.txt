@@ -1,0 +1,12 @@
+SampleYear	intertidal_site_code	total	acanthinucella.spp	alia.spp	amphissa.versicolor	aplysia.californica	bittium.eschrichtii	calliostoma.spp	ceratostoma.nuttalli	chitons	conus.californicus	crepidula.spp	epitonium.tinctum	fissurella.volcano	homalopoma.spp	katharina.tunicata	kelletia.kelletii	lepidochitona.dentiens	lepidochitona.hartwegii	lepidochitona.spp	lepidozona.spp	limpets.over.15.mm.in.size	littorina.spp	macron.lividus	mopalia.spp	norrisia.norrisi	nucella.canaliculata	nucella.emarginata	nucella.lamellosa	nucella.spp	nuttallina.spp	ocenebra.circumtexta	ocenebra.poulsoni	ocenebra.spp	onchidella.borealis	opalia.spp_	tegula.aureotincta	tegula.brunnea	tegula.eiseni	tegula.funebralis	tegula.gallina	tonicella.spp
+1999	CAY	36.9	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.45	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	36.45	0	0
+2000	CAY	52.64444444	1.088888889	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.133333333	0	0	1.533333333	0	0	0	0	0	0	0	0	0	0.422222222	0	0	0	0	0	0	0	49.46666667	0	0
+2001	CAY	37.54	0.9	0	0	0	0	0	0	0.06	0	0	0	0	0	0	0	0	1.96	0	0	1.88	8	0	0	0	0	0.08	0	0	0.04	0.28	0	0	0	0	0	0	0	24.34	0	0
+2002	CAY	112.54	0.76	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	3.36	89.86	0	0	0	0	0.36	0	0	0.22	0.04	0	0	0	0	0	0	0	16.94	0	0
+2003	CAY	84.38	1.38	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.2	1.02	0	0	0.76	62.32	0	0	0	0	0.4	0	0	0.18	0.12	0	0	0	0	0	0	0	18	0	0
+2004	CAY	119.34	0.86	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.1	1.22	0	0	1.72	95.88	0	0.08	0	0	2.26	0	0	0.16	0.3	0	0	0	0	0	0	0	16.76	0	0
+2005	CAY	264.02	2.28	0	0.02	0	0	0	0	0	0	0	0.04	0	0	0	0	0.06	0.6	0	0	0.62	225.88	0	0.04	0	0	1.82	0	0	0.06	0.26	0	0	0	0	0	0	0	32.34	0	0
+2006	CAY	324.08	2.16	0	0	0	0	0	0	0	0	0	0	0.02	0	0	0	0.08	0.18	0	0	0.62	298.52	0	0	0	0	1.18	0	0	0.08	0.16	0	0	0	0	0	0	0	21.08	0	0
+2007	CAY	448.24	1.82	0	0	0	0.02	0	0	0	0	0	0	0	0	0	0	0.08	0.56	0	0	0.7	419	0	0.02	0	0	2.96	0	0	0.08	0.3	0	0	0	0	0	0	0	22.7	0	0
+2008	CAY	383.06	2.44	0	0	0	0.02	0	0	0	0	0	0	0	0	0	0	0.26	1.02	0	0	0.6	358.7	0	0	0	0	1.78	0	0	0.04	0.24	0	0	0	0	0	0	0	17.96	0	0
+2009	CAY	194.56	1.52	0	0	0	0.04	0	0	0	0	0	0	0	0	0	0	0.04	0.72	0	0	1	169.28	0	0	0	0	1.52	0	0	0.04	0.48	0	0	0	0	0	0	0	19.92	0	0

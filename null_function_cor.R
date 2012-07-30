@@ -9,7 +9,7 @@
 null=function(abund) {
   
   library(foreach)
-  rand=5000
+  rand=100
   
 ######################################################################################
 #########################Randomization function using truncated normal################
@@ -82,29 +82,19 @@ null=function(abund) {
   #Calculate stabilization and equilibruim RA exactly as done with the real data
     null_intercept=matrix(NA,S)
     null_slope=matrix(NA,S)
-    
-  if(is.null(ratesr)==F) { 
-  if(sum(!is.na(ratesr))!=0) {  #only do analysis if randomization resulted in values
-    for(s in 1:S) {
-      if(sum(ratesr[,s],na.rm=T)!=0) {
-      null_intercept[s]=-lm(ratesr[,s]~relAr[,s])$coefficients[1]/lm(ratesr[,s]~relAr[,s])$coefficients[2]
-      null_slope[s]=lm(ratesr[,s]~relAr[,s])$coefficients[2]
-                        
-                          }}
-    
+  for(s in 1:S) {
+                               
+      null_intercept[s]=ifelse(sum( !is.na(ratesr[,s]))==0,NA,-lm(ratesr[,s]~relAr[,s])$coefficients[1]/lm(ratesr[,s]~relAr[,s])$coefficients[2])
+      null_slope[s]=ifelse(sum( !is.na(ratesr[,s]))==0,NA,lm(ratesr[,s]~relAr[,s])$coefficients[2]) }
       results=data.frame(null_intercept,null_slope)
       results1=results[which(results$null_slope<=0),]  
       results2=results1[which(results1$null_intercept<=1),]  
       results2=results2[which(results2$null_intercept>=0),]
     
   #returns the strength of the pattern in the randomized data 
-  pattern=ifelse(dim(results2)[1]<2,NA,summary(lm(log(-as.numeric(results2$null_slope))~log(as.numeric(results2$null_intercept))))$coefficients[2,1])
- 
-  }}
-    
-    if(is.null(pattern)==F) {
-    return(pattern) }
-    
+  pattern=ifelse(sum(!is.na(results2$null_slope))==0,NA,cor(as.numeric(results2$null_intercept),-as.numeric(results2$null_slope), method = "kendall", use = "complete.obs"))
+
+    return(pattern)
 }
 ######################################################################################  
 

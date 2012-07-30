@@ -1,0 +1,12 @@
+SampleYear	intertidal_site_code	total	acanthinucella.spp	alia.spp	amphissa.versicolor	aplysia.californica	bittium.eschrichtii	calliostoma.spp	ceratostoma.nuttalli	chitons	conus.californicus	crepidula.spp	epitonium.tinctum	fissurella.volcano	homalopoma.spp	katharina.tunicata	kelletia.kelletii	lepidochitona.dentiens	lepidochitona.hartwegii	lepidochitona.spp	lepidozona.spp	limpets.over.15.mm.in.size	littorina.spp	macron.lividus	mopalia.spp	norrisia.norrisi	nucella.canaliculata	nucella.emarginata	nucella.lamellosa	nucella.spp	nuttallina.spp	ocenebra.circumtexta	ocenebra.poulsoni	ocenebra.spp	onchidella.borealis	opalia.spp_	tegula.aureotincta	tegula.brunnea	tegula.eiseni	tegula.funebralis	tegula.gallina	tonicella.spp
+1999	BOA	12.9	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	12.9	0	0
+2000	BOA	18.45	0.4	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.05	0	0	1.375	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	16.625	0	0
+2001	BOA	42.1	0.45	0	0	0	0	0	0	0.775	0	0	0	0	0	0	0	0	0.4	0	0	3.275	7.5	0	0	0	0	0.275	0	0	0.9	0.025	0	0	0	0	0	0	0	28.5	0	0
+2002	BOA	90.075	0.25	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.55	0	0	3.875	51.8	0	0	0	0	0.675	0	0	0.975	0	0	0	0	0	0	0	0	31.95	0	0
+2003	BOA	126.2	0.175	0	0.025	0	0	0	0	0	0	0	0	0	0	0	0	0.05	0.475	0	0	4.175	95.15	0	0	0	0	0.7	0	0	0.925	0.025	0	0	0	0	0	0	0	24.5	0	0
+2004	BOA	176.025	0.625	0	0	0	0	0	0	0	0	0	0.025	0	0	0	0	0.275	0.55	0	0	3.975	130.65	0	0	0	0	2.4	0	0	0.675	0	0	0	0	0	0	0	0	36.85	0	0
+2005	BOA	280.8	0.4	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.05	0.775	0	0	3.175	246.425	0	0.1	0	0	2.525	0	0	1.025	0	0	0	0	0	0	0	0	26.325	0	0
+2006	BOA	224.9	0.225	0	0	0	0	0	0	0.05	0	0	0	0.025	0	0	0	0.375	0.275	0	0	2.5	198.025	0	0.025	0	0	2.125	0	0	0.85	0	0	0	0	0	0	0	0	20.425	0	0
+2007	BOA	387.6	0.2	0	0	0	0	0	0	0	0	0	0.025	0	0	0	0	0.05	0.675	0	0	2.525	355.45	0	0.075	0	0	0.975	0	0	1.25	0.1	0	0	0	0	0	0	0	26.275	0	0
+2008	BOA	190.65	0.575	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.15	0.65	0.025	0	2	163.8	0	0.025	0	0	0.6	0	0	0.975	0	0	0	0	0	0	0	0	21.85	0	0
+2009	BOA	169.8	0.6	0	0.05	0	0	0	0	0	0	0	0	0	0	0	0	0.05	0.8	0	0	1.8	145.05	0	0.05	0	0	1.35	0	0	0.75	0	0	0	0	0	0	0	0	19.3	0	0

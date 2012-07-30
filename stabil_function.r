@@ -18,6 +18,7 @@ return(r)
 #data:
 S=length(sp_names)
 lastyear=max(abund[,1])
+firstyear=min(abund[,1])
 
 #calc relative abundance
 relA=abund[,4:dim(abund)[2]]/abund[,3]
@@ -42,61 +43,25 @@ results[i,]=c(sp_names[i],NA,NA)
 results[i,]=c(sp_names[i],-lm(rates[,i]~relA[,i])$coefficients[1]/lm(rates[,i]~relA[,i])$coefficients[2],lm(rates[,i]~relA[,i])$coefficients[2]) }
 }
 
-results1=results[which(results$slope<=0),]
-results2=results1[which(results1$intercept<=1),]
-results2=results2[which(results2$intercept>=0),]
+results1=results[which(as.numeric(results$slope)<=0),]
+results2=results1[which(as.numeric(results1$intercept)<=1),]
+results2=results2[which(as.numeric(results2$intercept)>=0),]
 
 #Fit relationship between frequency and strength of stabilization (inverse transformed) 
-pattern=cor.test(as.numeric(results2$intercept),-as.numeric(results2$slope), method = "kendall", use = "complete.obs")
-
+if(is.null(results2)==F) {
+pattern=summary(lm(log(-as.numeric(results2$slope))~log(as.numeric(results2$intercept))))
+}
 
 #Compare to randomized data
 source("./null_function.R")
 null_pattern=null(abund)
+null.mean=mean(null_pattern,na.rm=T)
+p.val=length(which(null_pattern<pattern$coefficients[2,1]))/length(null_pattern)
 
-#fixed_results=data.frame(sp=results$sp,intercept=results$intercept,slope=as.numeric(results$slope)-as.numeric(null_results$slope))
-#fixed_pattern=summary(lm(1/(-as.numeric(slope))~as.numeric(intercept),data=fixed_results))
-#########################Figures#######################################
-  color=c("springgreen4","royalblue3","tomato","tomato4","yellowgreen","purple4","springgreen","yellow2","thistle4"
-        ,"tan2","violetred3","turquoise1","rosybrown3","palevioletred4","tan4","violet","steelblue4","palevioletred3"
-        ,"thistle2","red4","seagreen4","rosybrown4","paleturquoise4","palegreen4","darksalmon",1:50)
-#library("RColorBrewer")
-  symbol=c(1:25,32:127)
-  layout(matrix(c(1,1,2,3), 2, 2, byrow = F),widths=matrix(c(1.5,1),1))
-
-#plot data and fitted negative frequency dependence
-  plot(NA,NA,xlim=c(0,1),ylim=range(rates,na.rm=T),main=dataname,xlab="Relative Abundance",ylab=expression( paste('Growth Rate (log  ', lambda,')')) )
-  abline(h=0,col="grey",lwd=3)
-  
-  for(i in 1:S){
-  points(relA[,i],rates[,i],pch=symbol[i],col=color[i]) }
-  for(i in intersect(which(results[,3]<0),which(results[,2]>0))) {
-  abline(lm(rates[,i]~relA[,i]),col=color[i],lwd=2) }
-  for(i in intersect(which(results[,3]<0),which(results[,2]<0))) {
-  abline(lm(rates[,i]~relA[,i]),col=color[i],lwd=2,lty=2) }
-  
-  legend("topright",legend=sp_names,col=color[1:S],pch=symbol[1:S],lwd=2,cex=.75,bty='n')
-  mtext(side=3,paste('pattern=',round(pattern$estimate,3),'p-val=',round(pattern$p.value,3),sep=" "),adj=0,line=0.5,cex=0.75)
-
-#plot relationship between frequency and strength of stabilization
-  plot(results2$intercept,-as.numeric(results2$slope),log='xy',pch=19,bty='l',xlab="Equilibrium Frequency",ylab=expression(paste('Stabilization')),main="Observed pattern")
-  #identify outliers
-  identify(as.numeric(results2[,2]),-as.numeric(results2[,3]),results2$sp,xpd=NA,cex=0.5)
-
-# add a new layer to draw arrow showing direction of stabilization
-  parsave=par(new = TRUE,  mar = c(0,0,0,0))
-  plot(0,0,xlim=c(0,1),ylim=c(0,1),type='n',xaxt='n',yaxt='n',bty='n',col='white') 
-  arrows(0.03,0.2,0.03,0.85,2,length=.1,angle=30,lwd=2,xpd=NA)
-  text(0.04, 0.87,'STRONG',xpd=NA,col='red')
-  text(0.05, 0.18,'WEAK',xpd=NA,col='red')
-  par(parsave)
-
-#plot null pattern
-hist(null_pattern,breaks=20,xlim=c(min(min(null_pattern),pattern$coefficients[2,1]-.2),max(max(null_pattern),pattern$coefficients[2,1]+.2)),main="Histogram of null pattern")
-abline(v=pattern$coefficients[2,1],col='red',lwd=2)
+#source('./rawfigures.R')
 
 #save results
-  parcel=list(results=results,pattern=pattern,null_pattern=null_pattern)
+  parcel=list(results=results,pattern=cbind(S1=S,S2=dim(results2)[1],T=lastyear-firstyear+1,pattern=pattern$coefficients[2,1],null.mean=null.mean,p.val=p.val))
   return(parcel)
 
 }

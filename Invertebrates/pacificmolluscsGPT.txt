@@ -1,0 +1,12 @@
+SampleYear	intertidal_site_code	total	acanthinucella.spp	alia.spp	amphissa.versicolor	aplysia.californica	bittium.eschrichtii	calliostoma.spp	ceratostoma.nuttalli	chitons	conus.californicus	crepidula.spp	epitonium.tinctum	fissurella.volcano	homalopoma.spp	katharina.tunicata	kelletia.kelletii	lepidochitona.dentiens	lepidochitona.hartwegii	lepidochitona.spp	lepidozona.spp	limpets.over.15.mm.in.size	littorina.spp	macron.lividus	mopalia.spp	norrisia.norrisi	nucella.canaliculata	nucella.emarginata	nucella.lamellosa	nucella.spp	nuttallina.spp	ocenebra.circumtexta	ocenebra.poulsoni	ocenebra.spp	onchidella.borealis	opalia.spp_	tegula.aureotincta	tegula.brunnea	tegula.eiseni	tegula.funebralis	tegula.gallina	tonicella.spp
+1999	GPT	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+2000	GPT	3.1	0.125	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.325	0	0	1.025	0	0	0	0	0	0	0	0	0	0.025	0	0	0	0	0	0	0	1.6	0	0
+2001	GPT	56.85	0.075	0	0	0	0	0	0	0.025	0	0	0	0	0	0	0	0	0.9	0	0	1.55	49.375	0	0	0	0.05	1.4	0	0	0.15	0	0	0	0	0	0	0	0	3.325	0	0
+2002	GPT	101.9	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.8	0	0	1.775	88.65	0	0.075	0	0	2.225	0	0	0.25	0.025	0	0	0	0	0	0	0	8.1	0	0
+2003	GPT	94.625	0.025	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.025	0.6	0	0	0.725	84.625	0	0	0	0.05	2.5	0	0	0.05	0	0	0	0	0	0	0	0	6.025	0	0
+2004	GPT	130.875	0.15	0	0	0	0	0	0	0	0	0	0.025	0	0	0	0	0.025	0.275	0	0	0.625	113.875	0	0.025	0	0.075	4.975	0	0	0.15	0	0	0	0	0	0	0	0	10.675	0	0
+2005	GPT	196.8	0.15	0	0.325	0	0	0	0	0	0	0	0	0	0	0	0	0	0.3	0	0	0.15	182.925	0	0.025	0	0.125	4.225	0	0	0.1	0	0	0	0	0	0	0	0	8.475	0	0
+2006	GPT	238.425	0.225	0	0.05	0	0	0	0	0	0	0	0.075	0	0	0	0	0.025	0.175	0	0	0.475	217.075	0	0.025	0	0.1	5.375	0	0	0.1	0	0	0	0	0	0	0	0	14.725	0	0
+2007	GPT	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+2008	GPT	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+2009	GPT	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
