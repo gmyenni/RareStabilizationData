@@ -35,12 +35,21 @@ for(i in 1:(length(abund[,1])-1)) {
 rates=rates[which(abund[,1]!=lastyear),]
 
 #Calculate equilibrium frequency and stabilization
-results=data.frame(sp=NA,intercept=0,slope=0)
+results=data.frame(sp=NA,intercept=0,slope=0,persist=NA,mean=NA,median=NA)
 for(i in 1:S){
+  
+  results[i,1]=sp_names[i]
+  
+  results[i,4]=length(which(abund[,(i+3)]>0))/length(abund[,(i+3)])
+  
+  results[i,5]=mean(abund[which(abund[,(i+3)]>=0),(i+3)],na.rm=T)
+  
+  results[i,6]=median(abund[which(abund[,(i+3)]>=0),(i+3)],na.rm=T)
+  
 if(sum(rates[,i],na.rm=T)==0){
-results[i,]=c(sp_names[i],NA,NA)
+results[i,2:3]=c(NA,NA)
 }else{                           
-results[i,]=c(sp_names[i],-lm(rates[,i]~relA[,i])$coefficients[1]/lm(rates[,i]~relA[,i])$coefficients[2],lm(rates[,i]~relA[,i])$coefficients[2]) }
+results[i,2:3]=c(-lm(rates[,i]~relA[,i])$coefficients[1]/lm(rates[,i]~relA[,i])$coefficients[2],lm(rates[,i]~relA[,i])$coefficients[2]) }
 }
 
 results1=results[which(as.numeric(results$slope)<=0),]
@@ -49,19 +58,19 @@ results2=results2[which(as.numeric(results2$intercept)>=0),]
 
 #Fit relationship between frequency and strength of stabilization (inverse transformed) 
 if(is.null(results2)==F) {
-pattern=summary(lm(log(-as.numeric(results2$slope))~log(as.numeric(results2$intercept))))
+pattern=cov(log(as.numeric(results2$intercept)),log(-as.numeric(results2$slope)),use="complete.obs")
 }
 
 #Compare to randomized data
 source("./null_function.R")
 null_pattern=null(abund)
 null.mean=mean(null_pattern,na.rm=T)
-p.val=length(which(null_pattern<pattern$coefficients[2,1]))/length(null_pattern)
+p.val=length(which(null_pattern<pattern))/length(null_pattern)
 
 #source('./rawfigures.R')
 
 #save results
-  parcel=list(results=results,pattern=cbind(S1=S,S2=dim(results2)[1],T=lastyear-firstyear+1,pattern=pattern$coefficients[2,1],null.mean=null.mean,p.val=p.val))
+  parcel=list(results=results,pattern=cbind(S1=S,S2=dim(results2)[1],T=lastyear-firstyear+1,pattern=pattern,null.mean=null.mean,p.val=p.val))
   return(parcel)
 
 }

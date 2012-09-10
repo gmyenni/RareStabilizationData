@@ -26,7 +26,7 @@ files=c('./Plants/desertlab.txt', './Plants/desertlabshrub.txt', './Plants/Jorna
 names=c('DesertLabOpen', 'DesertLabShrub', 'JornadaCS', 'JornadaCW',     
         'JornadaGS', 'JornadaGW', 'JornadaMS', 'JornadaMW',      
         'JornadaPS', 'JornadaPW', 'JornadaTS', 'JornadaTW',      
-        'KansasAnnuals', 'KansasPerennials', 'PortalSummer.txt',
+        'KansasAnnuals', 'KansasPerennials', 'PortalSummer',
         'PortalWinter', 'Steppe')
 
 for(i in 1:length(files)) {

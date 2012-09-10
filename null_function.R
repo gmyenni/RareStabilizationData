@@ -98,7 +98,7 @@ null=function(abund) {
       results2=results2[which(results2$null_intercept>=0),]
     
   #returns the strength of the pattern in the randomized data 
-  pattern=ifelse(dim(results2)[1]<2,NA,summary(lm(log(-as.numeric(results2$null_slope))~log(as.numeric(results2$null_intercept))))$coefficients[2,1])
+  pattern=ifelse(dim(results2)[1]<2,NA,cov(log(as.numeric(results2$null_intercept)),log(-as.numeric(results2$null_slope)),use="complete.obs"))
  
   }}
     
