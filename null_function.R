@@ -23,14 +23,7 @@ null=function(abund) {
   #   }
   #   ABUNDR=matrix(NA,rand*dim(abund)[1],dim(abund)[2])
   #   ABUNDR[,4:dim(ABUNDR)[2]]=apply(abund[,4:dim(abund)[2]], 2, randpop, rand)
-  
-  #randomization using uniform dist
-  #     randpop=function(vect,rand) {
-  #       randpop=runif(length(vect)*rand,max(min(vect),0),max(vect))
-  #       return(randpop)
-  #     }
-  #     ABUNDR=matrix(NA,rand*dim(abund)[1],dim(abund)[2])
-  #     ABUNDR[,4:dim(ABUNDR)[2]]=apply(abund[,4:dim(abund)[2]], 2, randpop, rand)
+
   #   
   #randomization using shuffling
     ABUNDR1 = foreach(it=1:rand,.combine='rbind') %do% apply(abund,2,sample,replace=F)

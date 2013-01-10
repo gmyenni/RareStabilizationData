@@ -1,19 +1,21 @@
 #Produces strength of stabilization figures and calculates estimates from species abundance matrix and energy matrix
 ##with column order: Year, Site, Total, SP1, SP2, . . . (sorted by Site then by Year)
 
-stabilRA=function(abund, sp_names, dataname) {
+stabilRA=function(abund,dataname) {
+
+  sp_names=colnames(abund)[4:length(colnames(abund))]
 
 #calculate observed growth rates:
 
 #log lambda function
-lambda=function(file) {
-if(file[i+1,x]<=0 | file[i,x]<=0){
-  r=NA
-}else{
-  r=log(file[i+1,x]/file[i,x])
-}
-return(r)
-}
+  lambda=function(file) {
+    if(file[i+1,x]<=0 | file[i,x]<=0){
+      r=NA
+    }else{
+      r=log(file[i+1,x]/file[i,x])
+    }
+    return(r)
+  }
 
 #data:
 S=length(sp_names)
@@ -39,15 +41,18 @@ for(i in 1:S){
 if(sum(rates[,i],na.rm=T)==0){
 results[i,]=c(sp_names[i],NA,NA)
 }else{                           
-results[i,]=c(sp_names[i],mean(relA[,i],na.rm=T),lm(rates[,i]~relA[,i])$coefficients[2]) }
+results[i,]=c(sp_names[i],-lm(rates[,i]~relA[,i])$coefficients[1]/lm(rates[,i]~relA[,i])$coefficients[2],lm(rates[,i]~relA[,i])$coefficients[2]) }
 }
 
-results1=results[which(results$slope<=0),]
-results2=results1[which(results1$intercept<=1),]
-results2=results2[which(results2$intercept>=0),]
+intercept=as.numeric(results[,2])  
+slope=as.numeric(results[,3])
+  
+results1=results[which(as.numeric(results$slope)<=0),]
+results2=results1[which(as.numeric(results1$intercept)<=1),]
+results2=results2[which(as.numeric(results2$intercept)>=0),]
 
 #Fit relationship between frequency rank and strength of stabilization
-  pattern=cor.test(as.numeric(results2$intercept),-as.numeric(results2$slope), method = "kendall", use = "complete.obs")
+  pattern=cor.test(log(as.numeric(results2$intercept)),log(-as.numeric(results2$slope)), method="kendall", use = "complete.obs")
 
 
 #########################Figures#######################################
@@ -56,7 +61,7 @@ results2=results2[which(results2$intercept>=0),]
         ,"thistle2","red4","seagreen4","rosybrown4","paleturquoise4","palegreen4","darksalmon",1:50)
 #library("RColorBrewer")
   symbol=c(1:25,32:127)
-  layout(matrix(c(1,1,2,3), 2, 2, byrow = F),widths=matrix(c(1.5,1),1))
+  layout(matrix(c(1,2), 1, 2),widths=matrix(c(1.5,1),1))
 
 #plot data and fitted negative frequency dependence
   plot(NA,NA,xlim=c(0,1),ylim=range(rates,na.rm=T),main=dataname,xlab="Relative Abundance",ylab=expression( paste('Growth Rate (log  ', lambda,')')) )
@@ -64,26 +69,18 @@ results2=results2[which(results2$intercept>=0),]
   
   for(i in 1:S){
   points(relA[,i],rates[,i],pch=symbol[i],col=color[i]) }
-  for(i in intersect(which(results[,3]<0),which(results[,2]>0))) {
+  for(i in intersect(which(slope<0),which(intercept>0))) {
   abline(lm(rates[,i]~relA[,i]),col=color[i],lwd=2) }
-  for(i in intersect(which(results[,3]<0),which(results[,2]<0))) {
+  for(i in union(which(slope>0),which(intercept<0))) {
   abline(lm(rates[,i]~relA[,i]),col=color[i],lwd=2,lty=2) }
   
-  legend("topright",legend=sp_names,col=color[1:S],pch=symbol[1:S],lwd=2,cex=.75,bty='n')
+  legend("topright",legend=sp_names,col=color[1:S],pch=symbol[1:S],cex=.5,bty='n')
   mtext(side=3,paste('pattern=',round(pattern$estimate,3),'p-val=',round(pattern$p.value,3),sep=" "),adj=0,line=0.5,cex=0.75)
 
 #plot relationship between frequency and strength of stabilization
-  plot(as.numeric(results2[,2]),1/-as.numeric(results2[,3]),pch=19,bty='l',xlab="Equilibrium Frequency",ylab=expression(paste('Stabilizatio', n^-1)),main="Observed pattern")
+  plot(as.numeric(results2[,2]),-as.numeric(results2[,3]),pch=19,bty='l',col=color[intersect(which(slope<0),which(intercept>0))],xlab="Equilibrium Frequency",ylab='NFD',main="Observed pattern",log="xy")
   #identify outliers
-  identify(as.numeric(results2[,2]),1/-as.numeric(results2[,3]),results2$sp,xpd=NA,cex=0.5)
-
-# add a new layer to draw arrow showing direction of stabilization
-  parsave=par(new = TRUE,  mar = c(0,0,0,0))
-  plot(0,0,xlim=c(0,1),ylim=c(0,1),type='n',xaxt='n',yaxt='n',bty='n',col='white') 
-  arrows(0.03,0.2,0.03,0.85,1,length=.1,angle=30,lwd=2,xpd=NA)
-  text(0.04, 0.87,'WEAK',xpd=NA,col='red')
-  text(0.05, 0.18,'STRONG',xpd=NA,col='red')
-  par(parsave)
+  identify(as.numeric(results2[,2]),-as.numeric(results2[,3]),results2$sp,xpd=NA,cex=0.5)
 
 
 #save results
