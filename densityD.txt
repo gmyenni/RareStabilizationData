@@ -1,0 +1,28 @@
+###this is a pretty simple state space model...
+###based on the Gompertz model (Lebreton & Gimenez 2012)
+###you can add Group effect in the process model...
+
+##Notice: y is the log-transformed observed abundance
+
+model{
+
+  for(i in 1:(N-1)){
+     y[i+1]~dnorm(n_exp[i+1],sigma1) ##observation error
+  }
+
+  for(i in 1:(N-1)){
+     n_exp_mu[i+1]<-r+(1-b)*n_exp[i] ##process
+     n_exp[i+1]~dnorm(n_exp_mu[i+1],sigma2) ##process error
+  }
+  
+  n_exp[1]~dnorm(y[1],1) ##the first initial value of the series;"MUST"
+
+  r~dnorm(0,0.001) ## r is the growth rate;
+  b~dnorm(0,0.001) ## b is for density dependence
+
+  sigma1~dgamma(0.001,0.001)
+  sigma2~dgamma(0.001,0.001)
+
+}
+
+
