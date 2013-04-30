@@ -66,7 +66,34 @@ ggplot(results) + geom_point(data=rand_results,aes(Intercept,-Slope),colour="dar
        axis.text.y  = element_text(size=16),
        axis.text.x  = element_text(size=16))
 
+################################Figure 1 (two separate figures)###########################
+ggplot(results) +  
+  stat_smooth(data=rand_results,aes(Intercept,-Slope),method="lm", fill="black", colour="black", size=1.5,level=0.99,alpha=0.8,linetype = 2) +
+  geom_point(data=results,aes(intercept,-slope,colour=Group),size=2.5) + scale_colour_brewer(palette="Set1")  +
+  stat_smooth(data=results,aes(intercept,-slope),method="lm", fill="black", colour="black", size=1.5,level=0.99,alpha=0.8) +
+  scale_y_log10('Strength of NFD',breaks=c(0,1,10,100,1000,10000),labels=c('0','1','10','100','1000','10000'),limits=c(0.1,100000)) + 
+  scale_x_log10('Equilibrium frequency',breaks=c(0,0.0001,0.001,0.01,0.1,1),labels=c('0','0.0001','0.001','0.01','0.1','1'),limits=c(0.00001,1.1)) +
+  theme_bw() + 
+  theme(panel.grid.minor=element_blank(), panel.grid.major=element_blank(),
+        legend.text = element_text(size = 16),legend.key = element_rect(colour = NA),
+        legend.justification=c(1,1), legend.position=c(1,1),legend.title = element_text(size=16),
+        axis.title.y  = element_text(angle=90,size=16),
+        axis.title.x  = element_text(vjust=-.25,hjust=.55,size=16),
+        axis.text.y  = element_text(size=16),
+        axis.text.x  = element_text(size=16))
 
+ggplot(rand_results) + geom_point(data=rand_results,aes(Intercept,-Slope),colour="darkgrey") + 
+  stat_smooth(data=rand_results,aes(Intercept,-Slope),method="lm", fill="black", colour="black", size=1.5,level=0.99,alpha=0.8,linetype = 2) +
+  scale_y_log10('Strength of NFD',breaks=c(0,1,10,100,1000,10000),labels=c('0','1','10','100','1000','10000'),limits=c(0.1,100000)) + 
+  scale_x_log10('Equilibrium frequency',breaks=c(0,0.0001,0.001,0.01,0.1,1),labels=c('0','0.0001','0.001','0.01','0.1','1'),limits=c(0.00001,1.1)) +
+  theme_bw() + 
+  theme(panel.grid.minor=element_blank(), panel.grid.major=element_blank(),
+        legend.text = element_text(size = 16),legend.key = element_rect(colour = NA),
+        legend.position="right", legend.title = element_text(size=16),
+        axis.title.y  = element_text(angle=90,size=16),
+        axis.title.x  = element_text(vjust=-.25,hjust=.55,size=16),
+        axis.text.y  = element_text(size=16),
+        axis.text.x  = element_text(size=16))
 
 #############################By group, with site info##########################
 layout(matrix(1:6,2,3))
