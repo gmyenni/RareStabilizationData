@@ -21,6 +21,10 @@ plants <- subset(results, Group == "Plants")
 percents=data.frame(Group=c("Birds","Fish","Herps","Invertebrates","Mammals","Plants"),per=c("0.5","0.5","0.09","0.44","0.53","0.53"))
 
 rand_results=read.csv("background.csv",header=T)
+
+library("fdrtool")
+q.val=fdrtool(pattern$p.val, statistic="pvalue")$qval
+pattern$q.val=q.val
 ###############################Single Figure, by group###################################
 ggplot(results,aes(intercept,-slope,colour=Group)) + geom_point() + scale_colour_brewer(palette="Set1")  +
   
@@ -66,7 +70,7 @@ ggplot(results) + geom_point(data=rand_results,aes(Intercept,-Slope),colour="dar
        axis.text.y  = element_text(size=16),
        axis.text.x  = element_text(size=16))
 
-################################Figure 1 (two separate figures)###########################
+################################Figure 2 (two separate figures)###########################
 ggplot(results) +  
   stat_smooth(data=rand_results,aes(Intercept,-Slope),method="lm", fill="black", colour="black", size=1.5,level=0.99,alpha=0.8,linetype = 2) +
   geom_point(data=results,aes(intercept,-slope,colour=Group),size=2.5) + scale_colour_brewer(palette="Set1")  +
@@ -95,6 +99,10 @@ ggplot(rand_results) + geom_point(data=rand_results,aes(Intercept,-Slope),colour
         axis.text.y  = element_text(size=16),
         axis.text.x  = element_text(size=16))
 
+##############################p-value for Figure 2#############################
+fullm=lm(log(-slope)~log(intercept),data=results)
+nullm=lm(log(-Slope)~log(Intercept),data=rand_results)
+anova(nullm,fullm)
 #############################By group, with site info##########################
 layout(matrix(1:6,2,3))
 ggplot(birds,aes(intercept,-slope,colour = factor(site))) + geom_point(size=3) + scale_colour_hue(l=40,c=150,h=c(0,300),"Site/Community") +
