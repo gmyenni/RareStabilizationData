@@ -3,7 +3,7 @@ library('ggplot2')
 results=read.csv("./AllResults.csv",header=T)
 results$Pcat[which(is.na(results$intercept))]=NA
 
-pattern=read.csv("./AllPattern.csv",header=T)
+pattern=read.csv("./AllPattern_in.csv",header=T)
 pattern$Pcat[which(pattern$p.val<0.1)]="Y"
 pattern$Pcat[which(pattern$p.val>0.1)]="N"
 pattern$Srat=pattern$Persistent.S/pattern$Observed.S
@@ -21,7 +21,6 @@ plants <- subset(results, Group == "Plants")
 percents=data.frame(Group=c("Birds","Fish","Herps","Invertebrates","Mammals","Plants"),per=c("0.5","0.5","0.09","0.44","0.53","0.53"))
 
 rand_results=read.csv("background.csv",header=T)
-
 library("fdrtool")
 q.val=fdrtool(pattern$p.val, statistic="pvalue")$qval
 pattern$q.val=q.val

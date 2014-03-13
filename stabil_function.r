@@ -67,7 +67,9 @@ null_pattern=null(abund)
 null.mean=mean(null_pattern,na.rm=T)
 p.val=length(which(null_pattern<pattern))/length(null_pattern)
 
-#source('./rawfigures.R')
+#source rawfigures function to plot all results
+source('./rawfigures.R')
+rawfigures(relA,rates,sp_names,results2,pattern,null_pattern,p.val,dataname)
 
 #save results
   parcel=list(results=results,pattern=cbind(S1=S,S2=dim(results2)[1],T=lastyear-firstyear+1,pattern=pattern,null.mean=null.mean,p.val=p.val))
