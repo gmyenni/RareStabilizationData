@@ -14,7 +14,7 @@ null=function(abund) {
 ######################################################################################
 #########################Randomization function using truncated normal################
 
-  library("msm")
+  #library("msm")
   #randomization using truncated normal
   #   randpop=function(vect,rand) {
   #     ave=mean(as.numeric(vect)[which(as.numeric(vect)>=0)]); vari=var(as.numeric(vect)[which(as.numeric(vect)>=0)])
@@ -32,23 +32,17 @@ null=function(abund) {
   #fix some columns in randomized matrix
   ABUNDR=matrix(0,dim(ABUNDR1)[1],dim(ABUNDR1)[2])
   for(c in 4:dim(ABUNDR1)[2]) { ABUNDR[,c] =as.numeric(ABUNDR1[,c]) }
-  ABUNDR[ABUNDR == -99] <- 0                       #remove -99s
+  ABUNDR[!is.finite(ABUNDR)] <- 0                                   #remove NAs
   ABUNDR[,1]=rep(abund[,1],rand)                              #years
   ABUNDR[,2]=rep(abund[,2],rand)                              #sites
   ABUNDR[,3]=rowSums(data.matrix(ABUNDR[,4:dim(ABUNDR)[2]]))  #totals
-  
   
 ######################################################################################
 ############################Function to fit randomized data###########################  
   randfit=function(iter,ABUNDR,abund) {
     
     #log lambda function
-    lambda=function(file) {
-      if(file[i+1,x]<=0 | file[i,x]<=0){
-        r=NA
-      }else{
-        r=log(file[i+1,x]/file[i,x])
-      }
+    lambda=function(file) {r=log(file[i+1,x]/file[i,x])
       return(r)
     }
     
@@ -71,8 +65,9 @@ null=function(abund) {
       }
     }
     ratesr=ratesr[which(abundr[,1]!=lastyear),]
-    
-  #Calculate stabilization and equilibruim RA exactly as done with the real data
+    ratesr[which(!is.finite(ratesr))] = NA
+  
+    #Calculate stabilization and equilibruim RA exactly as done with the real data
     null_intercept=matrix(NA,S)
     null_slope=matrix(NA,S)
     
@@ -80,19 +75,21 @@ null=function(abund) {
   if(sum(!is.na(ratesr))!=0) {  #only do analysis if randomization resulted in values
     for(s in 1:S) {
       if(sum(ratesr[,s],na.rm=T)!=0) {
-      null_intercept[s]=-lm(ratesr[,s]~relAr[,s])$coefficients[1]/lm(ratesr[,s]~relAr[,s])$coefficients[2]
-      null_slope[s]=lm(ratesr[,s]~relAr[,s])$coefficients[2]
-                        
-                          }}
+        model=lm(ratesr[,s]~relAr[,s])         #linear
+        #model=lm(ratesr[,s]~log(relAr[,s]))     #non-linear
+        
+      null_intercept[s]=-model$coefficients[1]/model$coefficients[2]       #linear
+      #null_intercept[s]=exp(-model$coefficients[1]/model$coefficients[2])   #non-linear
+      null_slope[s]=model$coefficients[2]
     
       results=data.frame(null_intercept,null_slope)
       results1=results[which(results$null_slope<=0),]  
       results2=results1[which(results1$null_intercept<=1),]  
-      results2=results2[which(results2$null_intercept>=0),]
+      results2=results2[which(results2$null_intercept>=0),] }}
     
   #returns the strength of the pattern in the randomized data 
   pattern=ifelse(dim(results2)[1]<2,NA,cov(log(as.numeric(results2$null_intercept)),log(-as.numeric(results2$null_slope)),use="complete.obs"))
- 
+  
   }}
     
     if(is.null(pattern)==F) {

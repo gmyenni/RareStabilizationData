@@ -1,7 +1,7 @@
 #Combine all results
 
-###############################MAMMALS##############################################################
-
+############################################################################################
+ptm <- proc.time(); print(ptm)
 
 write_results=function(filename, sitename, resultsfile, patternfile) { 
 
@@ -20,11 +20,13 @@ write.table(cbind(site=sitename,sitename_out$pattern), patternfile, append=T, se
 }
 
 #List of files
-files=
-names=
+files=list.files(pattern=".txt",recursive=T)[60:102]
+names=gsub("\\..*","",list.files(pattern=".txt",recursive=T))[60:102]
 
 for(i in 1:length(files)) {
 
 write_results(files[i],names[i],"nonlinearresults.csv","nonlinearpattern.csv")
 
 }
+
+print(proc.time() - ptm)

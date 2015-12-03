@@ -6,24 +6,21 @@ stabil=function(abund, sp_names, dataname) {
 #calculate observed growth rates:
 
 #log lambda function
-lambda=function(file) {
-if(file[i+1,x]<=0 | file[i,x]<=0){
-  r=NA
-}else{
-  r=log(file[i+1,x]/file[i,x])
-}
+lambda=function(file) { r=log(file[i+1,x]/file[i,x])
 return(r)
 }
 
 #data:
+abund[abund<0]=NA
+abund[,3]=apply(abund[,-(1:3)],1,sum,na.rm=T)
 S=length(sp_names)
 lastyear=max(abund[,1])
 firstyear=min(abund[,1])
 
 #calc relative abundance
 relA=abund[,4:dim(abund)[2]]/abund[,3]
-relA=relA[which(abund[,1]!=lastyear),]
-
+relA=as.matrix(relA[which(abund[,1]!=lastyear),])
+relA[which(!is.finite(relA))] = NA
 
 #calc lambda
 rates=matrix(data=NA,nrow=nrow(abund)-1,ncol=ncol(abund)-3)
@@ -33,6 +30,7 @@ for(i in 1:(length(abund[,1])-1)) {
   }
 }
 rates=rates[which(abund[,1]!=lastyear),]
+rates[which(!is.finite(rates))] = NA
 
 #Calculate equilibrium frequency and stabilization
 results=data.frame(sp=NA,intercept=0,slope=0,persist=NA,mean=NA,median=NA)
@@ -49,7 +47,13 @@ for(i in 1:S){
 if(sum(rates[,i],na.rm=T)==0){
 results[i,2:3]=c(NA,NA)
 }else{                           
-results[i,2:3]=c(-lm(rates[,i]~relA[,i])$coefficients[1]/lm(rates[,i]~relA[,i])$coefficients[2],lm(rates[,i]~relA[,i])$coefficients[2]) }
+
+  model=lm(rates[,i]~relA[,i])         #linear
+  results[i,2:3]=c(-model$coefficients[1]/model$coefficients[2],model$coefficients[2]) }
+  
+  #model=lm(rates[,i]~log(relA[,i]))     #non-linear
+  #results[i,2:3]=c(exp(-model$coefficients[1]/model$coefficients[2]),model$coefficients[2]) }
+  
 }
 
 results1=results[which(as.numeric(results$slope)<=0),]
@@ -59,6 +63,7 @@ results2=results2[which(as.numeric(results2$intercept)>=0),]
 #Fit relationship between frequency and strength of stabilization (inverse transformed) 
 if(is.null(results2)==F) {
 pattern=cov(log(as.numeric(results2$intercept)),log(-as.numeric(results2$slope)),use="complete.obs")
+
 }
 
 #Compare to randomized data

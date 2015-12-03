@@ -1,9 +1,9 @@
-#Growth function to produce 3-species abundances based entirely on frequency-dependent 
+#Growth function to produce 10-species abundances based entirely on frequency-dependent 
 #growth (arguments control strength of NFD for each species), with demographic stochasticity
 
 growth=function(scenarioname,a,b) {
 
-relabunds=c(0.01,0.02,0.03,0.05,0.06,0.09,0.1,0.15,0.2,0.29)
+  relabunds=c(0.001,0.01,0.02,0.04,0.08,0.09,0.149,0.16,0.18,0.27) 
 t=20  
 C=data.frame(Year=1:(t+1),Site=scenarioname,Total=0,N1=rep(0,t+1),N2=rep(0,t+1),
              N3=rep(0,t+1),N4=rep(0,t+1),N5=rep(0,t+1),N6=rep(0,t+1),N7=rep(0,t+1),
@@ -22,7 +22,7 @@ C$Total[1]=sum(C[1,-(1:3)])
     C$N8[i+1]=rpois(1,exp(b[8]*(C$N8[i]/C$Total[i])+a[8])*C$N8[i])
     C$N9[i+1]=rpois(1,exp(b[9]*(C$N9[i]/C$Total[i])+a[9])*C$N9[i])
     C$N10[i+1]=rpois(1,exp(b[10]*(C$N10[i]/C$Total[i])+a[10])*C$N10[i])
-    C$Total[i+1]=sum(C[i+1,-(1:3)])
+    C$Total[i+1]=sum(C[i+1,-(1:3)],na.rm=T)
   }
   
 return(C)
