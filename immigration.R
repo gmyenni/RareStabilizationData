@@ -6,14 +6,20 @@ immigration=function(scenarioname,a,b) {
  
 #Focal Community 
   relabunds=c(0.001,0.01,0.02,0.04,0.08,0.09,0.149,0.16,0.18,0.27)  
-  t=20  
+  t=20 
+  
   C=data.frame(Year=1:(t+1),Site=scenarioname,Total=0,N1=rep(0,t+1),N2=rep(0,t+1),N3=rep(0,t+1),N4=rep(0,t+1),
                N5=rep(0,t+1),N6=rep(0,t+1),N7=rep(0,t+1),N8=rep(0,t+1),N9=rep(0,t+1),N10=rep(0,t+1))
   C[1,-(1:3)]=1000*relabunds
   C$Total[1]=sum(C[1,-(1:3)])
  
 #Source community 
-  relabunds2=rev(relabunds); b2=rev(b); a2=-b2*relabunds2 
+  #relabunds2=rev(relabunds)      #community is reverse of focal community
+  #b2=rev(b); a2=-b2*relabunds2 
+  
+  relabunds2=relabunds      #species are assigned random parameters
+  b2=sample(b); a2=sample(a) 
+  
   C2=data.frame(Year=1:(t+1),Site=scenarioname,Total=0,N1=rep(0,t+1),N2=rep(0,t+1),N3=rep(0,t+1),N4=rep(0,t+1),
                 N5=rep(0,t+1),N6=rep(0,t+1),N7=rep(0,t+1),N8=rep(0,t+1),N9=rep(0,t+1),N10=rep(0,t+1))
   C2[1,-(1:3)]=1000*relabunds2
