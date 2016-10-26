@@ -3,7 +3,7 @@
 #determining significance
 
 #################################Create 2 scenarios##########################################
-source('./immigration.R')
+source('./immigration2.R')
 source("./samplingfunction.r")
 source("./stabil_function.r") #source stabil function with plotting turned on
 
@@ -11,10 +11,11 @@ source("./stabil_function.r") #source stabil function with plotting turned on
 relabunds=c(0.001,0.01,0.02,0.04,0.08,0.09,0.149,0.16,0.18,0.27) 
 
 #Scenario 1 - no NFD structure (10 species)
-scen1b=rep(-1,10)
-scen1a=-scen1b*relabunds
+#scen1b=rep(-1,10)
+#scen1a=-scen1b*relabunds
+scen1a=rep(0.002,10)
 
-scen1C=immigration("scenario1",scen1a,scen1b)
+scen1C=immigration("scenario1",scen1a)
 scen1results=stabil(scen1C,sp_names=1:10,dataname="Focal Community")
 
 scen1obsA=sampling(C=scen1C, size=rep(1,10))

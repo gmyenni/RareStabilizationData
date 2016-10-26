@@ -2,7 +2,7 @@
 #known NFD structure to demonstrate the removal of known biases when determining significance
 
 #################################Create 3 scenarios##########################################
-source('./growth.R')
+source('./growth2.R')
 source("./samplingfunction.r")
 source("./stabil_function.r") #source stabil function with plotting turned on
 
@@ -10,9 +10,10 @@ source("./stabil_function.r") #source stabil function with plotting turned on
 relabunds=c(0.001,0.01,0.02,0.04,0.08,0.09,0.149,0.16,0.18,0.27) 
 
 #Scenario 1 - no NFD structure (10 species)
-scen1b=rep(-1,10)
-scen1a=-scen1b*relabunds
-scen1C=growth("scenario1",scen1a,scen1b)
+#scen1b=rep(-1,10)
+#scen1a=-scen1b*relabunds
+
+scen1C=growth("scenario1",a=rep(0.002,10))
 
 scen1obsA=sampling(C=scen1C, size=rep(1,10))
 scen1resultsA=stabil(scen1obsA,sp_names=1:10,dataname="Scenario 1A (k=1)")
